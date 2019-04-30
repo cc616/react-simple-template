@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./build",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "rootDir": "src",
+    "paths": {
+      "routes/*": ["src/routes/*"],
+      "styles/*": ["src/styles/*"],
+      "components/*": ["src/components/*"],
+		  "utils/*": ["src/utils/*"],
+		  "service/*": ["src/service/*"],
+		  "constants/*": ["src/constants/*"],
+    },
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules",
+    "webpack",
+  ],
+  "include": [
+    "src/**/*",
+    "typing/**/*"
+  ]
+}
