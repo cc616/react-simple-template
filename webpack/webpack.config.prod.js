@@ -1,5 +1,4 @@
 const path = require('path')
-const autoprefixer = require('autoprefixer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin")
 
@@ -68,8 +67,7 @@ module.exports = {
           {
             loader: require.resolve('css-loader'),
             options: {
-              importLoaders: 1,
-              minimize: true,
+              importLoaders: 2,
               sourceMap: false,
             },
           },
@@ -79,23 +77,11 @@ module.exports = {
               ident: 'postcss',
               plugins: () => [
                 require('postcss-flexbugs-fixes'),
-                autoprefixer({
-                  browsers: [
-                    '>1%',
-                    'last 4 versions',
-                    'Firefox ESR',
-                    'not ie < 9',
-                  ],
-                  flexbox: 'no-2009',
-                }),
               ],
             },
           },
           {
             loader: require.resolve('less-loader'),
-            options: {
-              // modifyVars: { '@primary-color': '#1890ff' },
-            },
           },
         ],
       },
