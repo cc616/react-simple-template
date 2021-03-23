@@ -1,6 +1,6 @@
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
-import App from 'routes/index'
-import 'styles/index.less'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Main from '@/pages/index'
+import '@/styles/index.less'
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<Main />, document.getElementById('app'))
